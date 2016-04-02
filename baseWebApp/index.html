@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="script/jquery.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script/mqttws31.js"></script>
+
+
+  <!--  <link rel="stylesheet" href="script/jquery-ui-1.11.2/jquery-ui.css">-->
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script/myScript.js" type="text/javascript"></script>
+
+</head>
+
+
+
+<body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header navbar-form navbar-left navbar" onsubmit="return connect();>
+          <div class=" form-group ">
+
+              Username
+              <input type="text " name="userName" class="form-control " placeholder="Username " aria-describedby="sizing-addon3 ">
+              deviceName
+              <input type="text " name="deviceName" class="form-control " placeholder="deviceName " aria-describedby="sizing-addon3 ">
+            </br>
+
+              deviceId
+              <input type="text " name="deviceId" class="form-control " placeholder="deviceId " aria-describedby="sizing-addon3 ">
+              devicePsw
+              <input type="text " name="devicePsw" class="form-control " placeholder="devicePsw " aria-describedby="sizing-addon3 ">
+</br>
+              topic
+              <input type="text " name="topic" class="form-control " placeholder="topic " aria-describedby="sizing-addon3 ">
+
+            <button type="submit " class="btn btn-default " onClick="connect() " >Connect</button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="container ">
+      <h1>Connect your device to Arduino Cloud</h1>
+    </section>
+
+    <section class="container ">
+
+      <div class="megabutton on col-md-4 col-md-offset-4">
+        on
+      </div>
+      <!-- <button type="ring " class="btn btn-default " onClick="sendMessage( 'ring', 'on'); " >light on</button>
+      <button type="ring " class="btn btn-default " onClick="sendMessage( 'ring', 'off'); " >light off</button> -->
+    </section>
+
+
+    <section class="monitor ">
+      <div class="container ">
+      <span class="glyphicon glyphicon-list " aria-hidden="true "></span>Message Log
+        <table class="table messages" >
+          <tr>
+            <th>Topic</th><th>Payload</th>
+          </tr>
+
+        </table>
+      </ul>
+      <div class="container ">
+    </section>
+
+</body>
+
+
+
+
+</html>
